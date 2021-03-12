@@ -25,16 +25,71 @@ vertical-align: baseline;
 }
 
 body{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+    background-color: gray;
+    letter-spacing: 2px;
 }
 
-.intro{
-    display: flex;
+header h1{
+    font-size: 30px;
+    color: white;
+    margin-top: 15px;
+}
+
+header span{
+    color: red;
+}
+
+nav{
+    margin: 15px 0;
 }
 
 nav a{
     text-decoration: none;
+    padding: 5px;
+    font-size: 20px;
+    margin: 10px 0;
+    color: black;
+}
+
+nav a:hover{
+    color: red;
+}
+
+.intro{
+    display: flex;
+    align-items: flex-end;
+}
+
+.my-story{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-story h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+button{
+    background-color: red;
+    border-radius: 10px;
+    padding: 8px;
+    letter-spacing: 2px;
+    max-width: 150px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+.my-story p{
+    color: white;
+    padding-top: 15px;
+    padding-right: 50px;
 }
 
 .projects{
@@ -58,3 +113,15 @@ nav a{
 .box h2{
     text-align: center;
 }
+
+footer{
+    width: 30%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+footer h2{
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
