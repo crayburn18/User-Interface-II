@@ -13,8 +13,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,  
 time, mark, audio, video {  
 margin: 0;  
-padding: 0;  
-border: 0;  
+padding: 0;    
 font-size: 100%;  
 font: inherit;  
 vertical-align: baseline;  
@@ -22,17 +21,23 @@ vertical-align: baseline;
 
 *{
     box-sizing: border-box;
+    border: 1px solid black;
+}
+
+html{
+    font-size: 62.5%;
 }
 
 body{
-    max-width: 1200px;
+    font-size: 1.8rem;
+    width: 90%;
     margin: 0 auto;
     background-color: gray;
     letter-spacing: 2px;
 }
 
 header h1{
-    font-size: 30px;
+    font-size: 3rem;
     color: white;
     margin-top: 15px;
 }
@@ -47,8 +52,8 @@ nav{
 
 nav a{
     text-decoration: none;
-    padding: 5px;
-    font-size: 20px;
+    padding: 2%;
+    font-size: 2rem;
     margin: 10px 0;
     color: black;
 }
@@ -69,16 +74,16 @@ nav a:hover{
 }
 
 .my-story h2{
-    font-size: 30px;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 button{
     background-color: red;
     border-radius: 10px;
-    padding: 8px;
+    padding: 1.2%;
     letter-spacing: 2px;
-    max-width: 150px;
+    /* width: 150px; */
 }
 
 button:hover{
@@ -89,7 +94,7 @@ button:hover{
 .my-story p{
     color: white;
     padding-top: 15px;
-    padding-right: 50px;
+    padding-right: 10%;
 }
 
 .projects{
@@ -101,6 +106,7 @@ button:hover{
 }
 
 .box{
+    max-width: 100%;
     width: 22%;
     margin: 20px 0;
     /* text-align: center; */
@@ -122,6 +128,84 @@ footer{
 
 footer h2{
     padding-bottom: 20px;
-    font-size: 25px;
+    font-size: 2.5rem;
+}
+
+/* Media Queries */
+
+/* Tablet 800px*/
+
+@media(max-width:800px){
+    button{
+        border-radius: 0;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a{
+        width: 30%;
+        margin: 1px auto;
+        border: 1px solid black;
+    }
+
+    nav a:first-child{
+        background-color: black;
+        color: white;
+    }
+
+    header h1{
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .intro{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro div:first-child{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro img{
+        height: 60vh;
+    }
+
+    .my-story{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .box{
+        width: 48%;
+    }
+
+    footer{
+        width: 80%;
+    }
+}
+
+/* Phones */
+
+@media(max-width:500px){
+    .intro p{
+        padding-left: 9%;
+    }
+
+    .my-story a{
+        width: 30%;
+    }
+
+    .my-story button{
+        padding: 3%;
+    }
 }
 
